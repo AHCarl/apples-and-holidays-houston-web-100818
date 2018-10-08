@@ -40,15 +40,8 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
   # remember to return the updated hash
-  holiday_hash.map do |s, h|
-    if s == season 
-      holiday_hash[s] = holiday_name
-    end
-  end
-  holiday_hash.map[season][holiday_name] do |data|
-    data << supply_array
-  end
-end
+  holiday_hash[season][holiday_name] = supply_array
+  holiday_hash
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
